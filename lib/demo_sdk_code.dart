@@ -9,8 +9,6 @@ List<String> carBrands = [
   "Hyundai"
 ];
 
-List<String> fruits = ["Apple", "Banana", "Orange", "Peach"];
-
 class GetCars extends StatelessWidget {
   const GetCars({super.key});
 
@@ -31,6 +29,8 @@ class GetCars extends StatelessWidget {
   }
 }
 
+List<String> fruits = ["Apple", "Banana", "Orange", "Peach"];
+
 class GetFruits extends StatelessWidget {
   const GetFruits({super.key});
 
@@ -41,6 +41,35 @@ class GetFruits extends StatelessWidget {
       itemBuilder: (context, index) {
         return Text(
           fruits[index],
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        );
+      },
+    );
+  }
+}
+
+List<String> laptopBrands = [
+  "DELL",
+  "HP",
+  "Lenovo",
+  "Asus",
+  "Apple",
+  "Samsung"
+];
+
+class GetSamsung extends StatelessWidget {
+  const GetSamsung({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: laptopBrands.length,
+      itemBuilder: (context, index) {
+        return Text(
+          laptopBrands[index],
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w500,
